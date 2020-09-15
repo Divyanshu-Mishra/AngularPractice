@@ -1,5 +1,4 @@
-var a=0,b=0,c=0,d=0,e=0;
-
+var dict = {};
 function incrementValue()
 {
     var value = parseInt(document.getElementById('carClickCounter').textContent, 10);
@@ -7,51 +6,22 @@ function incrementValue()
     value++;
     document.getElementById('carClickCounter').textContent = value;
     var carName = document.getElementById('carName').textContent;
-    switch (carName) {
-        case "Dodge Challanger":
-            a = value;
-            break;
-        case "Shelby Mustang '67":
-            b = value;
-            break;
-        case "Chevrolet Camaro '69":
-            c = value;
-            break;
-        case "Aston Martin DB11":
-            d = value;
-            break;
-        case "Lincoln Continental '76":
-            e = value;
-            break;
-        default:
-            break;
-    }
+    dict[carName] = value;
+
 }
 
 function showImage(id)
 {    
+    if (dict[String(id)])
+    {
+        dict[String(id)];
+    }
+    else
+    {
+        dict[String(id)] = 0;
+    }
 
-var countVal = 0
-switch (id) {
-    case "Dodge Challanger":
-        countVal = a;
-        break;
-    case "Shelby Mustang '67":
-        countVal = b;
-        break;
-    case "Chevrolet Camaro '69":
-        countVal = c;
-        break;
-    case "Aston Martin DB11":
-        countVal = d;
-        break;
-    case "Lincoln Continental '76":
-        countVal = e;
-        break;
-    default:
-        break;
-}
-showImage1(id, countVal)
+showImage1(id, dict[String(id)])
 }
 function showImage1(id, countVal)
 {
