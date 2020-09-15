@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <script src="ClickerScript.js"></script>
+<head>
+<title>Cars</title>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      width: 1000px;
+      border-collapse: collapse;
+    }
+    ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+ul li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+ul li:last-child {
+  border-bottom: none
+}
+    th, td {
+      padding: 10px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <span>Click on a car name</span>
+        <span>
+            <ul id="ulCarList">
+                <li id="Dodge Challanger" onclick="showImage(id)">Dodge Challanger</li>
+                <li id="Shelby Mustang '67" onclick="showImage(id)">Shelby Mustang '67</li>
+                <li id="Chevrolet Camaro '69" onclick="showImage(id)">Chevrolet Camaro '69</li>
+                <li id="Aston Martin DB11" onclick="showImage(id)">Aston Martin DB11</li>
+                <li id="Lincoln Continental '76" onclick="showImage(id)">Lincoln Continental '76</li>
+            </ul>
+        </span>
+    </div>
+    <table id="tblCarImg">
+        <tr>
+        <td id="tdCarImg" align="center" >
+            <img id="carImg" src="yourImage.jpg" height="300" width="400" onclick="incrementValue()">
+        </td>
+        <td id="tdCarName" align="center">
+            <b id="carName">Car Name</b>
+        </td>
+        <td id="tdCarCount" align="center">
+            <b id="carClickCounter">0</b>
+        </td>
+    </tr>
+    </table>
+
+</body>
+</html>
